@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Order | House of Buns</title>
+  <link rel="stylesheet" href="css/orders.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo"><i class="fas fa-hamburger"></i> House of Buns</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="orders.html" class="active">Order</a>
+      </nav>
+    </div>
+  </header> -->
+  <div id="header-placeholder"></div>
+
+
+  <section class="order-section container">
+    <h1>Place Your Order</h1>
+
+    <form id="orderForm">
+      <div class="burgers">
+        <h2>Choose Your Burgers</h2>
+
+        <!-- Burger 1 -->
+        <div class="burger-item" data-name="Classic Burger" data-price="129">
+          <label><input type="checkbox" class="burger-check"> Classic Burger - ₹129</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Extra Cheese" data-price="20"> Extra Cheese (+₹20)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Onions" data-price="10"> Onions (+₹10)</label>
+          </div>
+        </div>
+
+        <!-- Burger 2 -->
+        <div class="burger-item" data-name="Bacon Beast" data-price="149">
+          <label><input type="checkbox" class="burger-check"> Bacon Beast - ₹149</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Extra Bacon" data-price="30"> Extra Bacon (+₹30)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Cheese" data-price="20"> Cheese (+₹20)</label>
+          </div>
+        </div>
+
+        <!-- Burger 3 -->
+        <div class="burger-item" data-name="Veggie Supreme" data-price="119">
+          <label><input type="checkbox" class="burger-check"> Veggie Supreme - ₹119</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Paneer" data-price="25"> Paneer (+₹25)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Lettuce" data-price="10"> Lettuce (+₹10)</label>
+          </div>
+        </div>
+
+        <!-- New Burger 4 -->
+        <div class="burger-item" data-name="Spicy Inferno" data-price="139">
+          <label><input type="checkbox" class="burger-check"> Spicy Inferno - ₹139</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Jalapeños" data-price="15"> Jalapeños (+₹15)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Hot Sauce" data-price="10"> Hot Sauce (+₹10)</label>
+          </div>
+        </div>
+
+        <!-- New Burger 5 -->
+        <div class="burger-item" data-name="Double Patty King" data-price="179">
+          <label><input type="checkbox" class="burger-check"> Double Patty King - ₹179</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Double Cheese" data-price="25"> Double Cheese (+₹25)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Grilled Onions" data-price="15"> Grilled Onions (+₹15)</label>
+          </div>
+        </div>
+
+        <!-- New Burger 6 -->
+        <div class="burger-item" data-name="Cheese Burst Delight" data-price="159">
+          <label><input type="checkbox" class="burger-check"> Cheese Burst Delight - ₹159</label>
+          <div class="extras">
+            <label><input type="checkbox" class="extra-check" data-name="Mozzarella" data-price="30"> Mozzarella (+₹30)</label>
+            <label><input type="checkbox" class="extra-check" data-name="Stuffed Crust" data-price="35"> Stuffed Crust (+₹35)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="customer-info">
+        <h2>Your Info</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="address" placeholder="Delivery Address" rows="3" required></textarea>
+      </div>
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="summary-list"></ul>
+        <h3>Total: ₹<span id="total-price">0</span></h3>
+      </div>
+
+      <button type="submit" class="submit-btn">Place Order</button>
+    </form>
+  </section>
+
+  <!-- <footer>
+    <p>© 2025 House of Buns. Designed with ❤️ by Roshni Yadav</p>
+  </footer> -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2><i class="fas fa-hamburger"></i> House of Buns</h2>
+      <p>Crafting the juiciest burgers with a side of love 🍔</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> houseofbuns@email.com</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 House of Buns.All Rights Reserved. Designed with ❤️ by Roshni Yadav</p>
+  </div>
+</footer>
+
+
+  <script src="js/orders.js"></script>
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navLinks");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("show");
+        });
+      }
+    });
+</script>
+<!-- Order Success Modal -->
+<div class="order-success-modal">
+  <div class="modal-content">
+    <i class="fas fa-check-circle"></i>
+    <h2>Order Placed!</h2>
+    <p>Your delicious burgers are on the way. 🍔</p>
+  </div>
+</div>
+
+</body>
+</html>

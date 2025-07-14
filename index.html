@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House of Buns</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo"><i class="fas fa-hamburger"></i> House of Buns</div>
+      <nav>
+        <a href="about.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header> -->
+  <div id="header-placeholder"></div>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to <span>House of Buns</span></h1>
+      <p>The home of mouthwatering, handcrafted burgers made fresh daily.</p>
+      <a href="orders.html" class="btn" style="margin-top: 5rem;">Order Now</a>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2>Our Favorites</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1508737027454-e6454ef45afd?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cheeseburger" />
+          <h3>Classic Cheeseburger</h3>
+          <p>Beef patty, cheddar, lettuce, and sauce.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1620187801228-f5312a6434e8?q=80&w=663&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bacon Burger" />
+          <h3>Bacon Overload</h3>
+          <p>Double bacon, beef, BBQ glaze.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1700835880369-a8e1eb918474?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vegan Burger" />
+          <h3>Vegan Delight</h3>
+          <p>Plant-based patty, vegan cheese, greens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer>
+    <div class="container">
+      <p>© 2025 House of Buns. Designed with ❤️ by Roshni Yadav</p>
+    </div>
+  </footer> -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2><i class="fas fa-hamburger"></i> House of Buns</h2>
+      <p>Crafting the juiciest burgers with a side of love 🍔</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> houseofbuns@email.com</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 House of Buns.All Rights Reserved. Designed with ❤️ by Roshni Yadav</p>
+  </div>
+</footer>
+
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navLinks");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("show");
+        });
+      }
+    });
+</script>
+
+</body>
+</html>

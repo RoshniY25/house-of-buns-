@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | House of Buns</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <!-- <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo"><i class="fas fa-hamburger"></i> House of Buns</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header> -->
+  <div id="header-placeholder"></div>
+
+
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <h1>About House of Buns</h1>
+      <p>More than just burgers — we craft experiences.</p>
+    </div>
+  </section>
+
+  <section class="about-section container" data-aos="fade-up">
+    <h2>Why This Website?</h2>
+    <p>
+      <strong>House of Buns</strong> was built out of a deep love for gourmet burgers and an even stronger passion for clean and professional web design.
+      The goal was to create a digital space that doesn’t just show a menu — but tells a story. This website aims to capture the flavor, vibe, and soul of a real-world burger brand.
+    </p>
+    <p>
+      While many food sites focus only on images or basic details, <strong>House of Buns</strong> goes beyond:
+      We’ve included a handcrafted layout, zig-zag menu design, smooth scrolling animations, and rich visuals — all to provide a memorable browsing experience to food lovers.
+    </p>
+    <p>
+      Whether you're here to browse, get hungry, or get inspired — this website brings together quality design, interactivity, and purpose.
+    </p>
+  </section>
+
+  <section class="creator-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Meet the Creator</h2>
+      <div class="creator-card" data-aos="fade-up">
+        <div class="creator-image">
+          <img src="assets/pic.jpeg" alt="Roshni Yadav" />
+        </div>
+        <div class="creator-details">
+          <h3 class="creator-name">Roshni Yadav</h3>
+          <p class="creator-role">Frontend Developer & Designer</p>
+          <p class="creator-bio">
+            I’m the mind behind <strong>House of Buns</strong> — a passionate frontend developer crafting real-world styled web experiences.
+            I believe good design is as satisfying as a good burger. 🍔
+          </p>
+          <a href="https://github.com/roshniy25" target="_blank" class="btn">View My GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer>
+    <div class="container">
+      <p>© 2025 House of Buns. Designed with ❤️ by Roshni Yadav</p>
+    </div>
+  </footer> -->
+  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2><i class="fas fa-hamburger"></i> House of Buns</h2>
+      <p>Crafting the juiciest burgers with a side of love 🍔</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="orders.html">Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> houseofbuns@email.com</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 House of Buns.All Rights Reserved. Designed with ❤️ by Roshni Yadav</p>
+  </div>
+</footer>
+
+
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    scrollBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      const toggle = document.getElementById("menuToggle");
+      const nav = document.getElementById("navLinks");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("show");
+        });
+      }
+    });
+</script>
+
+</body>
+</html>
