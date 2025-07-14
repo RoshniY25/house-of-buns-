@@ -1,0 +1,196 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #d90429;
+  padding: 1rem 0;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a.active,
+nav a:hover {
+  color: #ffe066;
+}
+
+/* Hero Section */
+.about-hero {
+  background: url('https://media.istockphoto.com/id/638349896/photo/tasty-hamburger-with-french-fries-and-beer-on-wooden-table.jpg?s=612x612&w=0&k=20&c=aZ9HtDXzBGjazQvW-lIDlrg-NMuskZLm0Suuh3F9hVY=') center/cover no-repeat;
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-hero::after {
+  content: "";
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  inset: 0;
+}
+.about-hero-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.about-hero h1 {
+  font-size: 3rem;
+}
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 0;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Creator Section */
+.creator-section {
+  background: linear-gradient(145deg, #fff0f3, #fff);
+  padding: 5rem 0;
+}
+.creator-section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: #222;
+}
+.creator-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.creator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+.creator-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #d90429;
+}
+.creator-details {
+  flex: 1;
+}
+.creator-name {
+  font-size: 1.9rem;
+  color: #d90429;
+  margin-bottom: 0.3rem;
+}
+.creator-role {
+  font-size: 1.05rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+.creator-bio {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 600px;
+}
+.creator-details .btn {
+  display: inline-block;
+  margin-top: 1.3rem;
+  padding: 0.7rem 1.6rem;
+  background: #d90429;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.creator-details .btn:hover {
+  background: #a40322;
+}
+
+/* Footer */
+/* footer {
+  background: #111;
+  color: #aaa;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+} */
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #d90429;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  display: none;
+  transition: background 0.3s ease;
+}
+#scrollTopBtn:hover {
+  background-color: #a40322;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .creator-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .creator-bio {
+    max-width: 100%;
+  }
+}
